@@ -1,47 +1,59 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-
-<%-- <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
-    <script src="<c:url value="/resources/js/jquery-3.2.1.min.js" />"></script>
-    <script src="<c:url value="/resources/js/popper.js" />"></script>
-    <script src="<c:url value="/resources/js/bootstrap.js" />"></script> --%>
-
-<!-- jquery -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- bootstrap -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<!-- datatables -->
-<link rel="stylesheet" type="text/css"
-	href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
-<script type="text/javascript"
-	src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-
-
-
-
-
-
 <!-- Admin Module -->
+<%-- <nav class="nav nav-tabs" id="menu" role="tablist">
+	<a class="nav-item nav-link" href="${pageContext.request.contextPath}/home">Home</a>
+	<a class="nav-item nav-link" href="${pageContext.request.contextPath}/city">City</a>
+	<a class="nav-item nav-link" href="${pageContext.request.contextPath}/category">Category</a>
+	<a class="nav-item nav-link" href="${pageContext.request.contextPath}/product">Product</a>
+	<a class="nav-item nav-link" href="${pageContext.request.contextPath}/raw-material">Raw Material</a>
+	<a class="nav-item nav-link" href="${pageContext.request.contextPath}/franchise">Franchise</a>
+	<a class="nav-item nav-link" href="${pageContext.request.contextPath}/order-stock">Order/Stock</a>
+	<a class="nav-item nav-link" href="${pageContext.request.contextPath}/Communication">Communication</a>
+	<a class="nav-item nav-link" href="${pageContext.request.contextPath}/Photo-gallery">Photo-Gallery</a>
+	<a class="nav-item nav-link" href="${pageContext.request.contextPath}/profile">Profile</a>
+	
+	<!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>	 -->
+	<!-- <a class="nav-item nav-link active" data-toggle="tab" href="#">Home</a>
+	<a class="nav-item nav-link" data-toggle="tab" href="#">Profile</a>
+	<div class="dropdown">
+		<a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown"
+			href="#">Dropdown</a>
+		<div class="dropdown-menu">
+			<a class="dropdown-item" href="#nav-dropdown1" data-toggle="tab">@fat</a>
+			<a class="dropdown-item" href="#nav-dropdown2" data-toggle="tab">@mdo</a>
+		</div>
+	</div> -->
+</nav>
+<script>
+	var array = window.location.href.split('/');
+	array.splice(0,3);
+	var href = '/' + array.join('/');
+	$('#menu a').removeClass('active');
+	$.each($('#menu a'), function(){
+		if(href === $(this).attr('href')){
+			$(this).addClass('active');
+			return false;
+		}
+	});
+</script> --%>
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Admin Modules</a>
+			<a class="navbar-brand" href="${pageContext.request.contextPath}/home">Admin Modules</a>
 		</div>
 		<ul class="nav navbar-nav">
 			<li><a href="${pageContext.request.contextPath}/city">City</a></li>
 			<li><a href="${pageContext.request.contextPath}/category">Category</a></li>
 			<li><a href="${pageContext.request.contextPath}/product">Product</a></li>
-			<li><a href="${pageContext.request.contextPath}/rawMaterial">Raw Material</a></li>
+			<li><a href="${pageContext.request.contextPath}/raw-material">Raw Material</a></li>
 			<li><a href="${pageContext.request.contextPath}/franchise">Franchise</a></li>
-			<li><a href="${pageContext.request.contextPath}/orderStock">Order/Stock</a></li>
+			<li><a href="${pageContext.request.contextPath}/order-stock">Order/Stock</a></li>
 			<li><a href="${pageContext.request.contextPath}/Communication">Communication</a></li>
-			<li><a href="${pageContext.request.contextPath}/PhotoGallery">Photo-Gallery</a></li>
+			<li><a href="${pageContext.request.contextPath}/Photo-gallery">Photo-Gallery</a></li>
 			<li><a href="${pageContext.request.contextPath}/profile">Profile</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
@@ -57,6 +69,16 @@
 						class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 			</c:if>
 		</ul>
+		<form class="navbar-form navbar-left">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search">
+				<div class="input-group-btn">
+					<button class="btn btn-default" type="submit" style="height: 34px;">
+						<i class="glyphicon glyphicon-search"></i>
+					</button>
+				</div>
+			</div>
+		</form>
 	</div>
 </nav>
 

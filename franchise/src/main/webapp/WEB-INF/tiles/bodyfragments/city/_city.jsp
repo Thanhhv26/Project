@@ -8,9 +8,10 @@
 <button type="submit" id="btnRefresh"
 	class="btn btn-success btn-sm glyphicon glyphicon-refresh"></button>
 <br><br>
-<div class="table-responsive">
-	<table id="tblCities"
-		class="table table-striped table-bordered table-hover display">
+<div class="panel panel-info">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Cites</div>
+  <table id="tblCities" class="table table-striped table-bordered table-hover display">
 		<thead>
 			<tr class="text-center">
 				<th class="text-center">Id</th>
@@ -45,16 +46,14 @@
 </div>
 
 <!-- Modal --Begin -->
-<jsp:include page="../city/create.jsp" />
-<jsp:include page="../city/update.jsp" />
-<jsp:include page="../city/detail.jsp" />
-<jsp:include page="../city/delete.jsp" />
-<jsp:include page="../city/detail.jsp" />
+<jsp:include page="../city/_cityCreate.jsp" />
+<jsp:include page="../city/_cityUpdate.jsp" />
+<jsp:include page="../city/_cityDetail.jsp" />
+<jsp:include page="../city/_cityDelete.jsp" />
+<jsp:include page="../city/_cityDetail.jsp" />
 <!-- Modal --End  -->
 
 <!-- Script --Begin -->
-<script src="<c:url value="/resources/js/common/common.js" />"></script>
-
 <script src="<c:url value="/resources/js/city/city.js" />"></script>
 <script src="<c:url value="/resources/js/city/create.js" />"></script>
 <script src="<c:url value="/resources/js/city/update.js" />"></script>

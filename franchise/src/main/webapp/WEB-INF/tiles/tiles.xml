@@ -42,6 +42,18 @@
 		<put-attribute name="title" value="Category Manager" />
 		<put-attribute name="body" value="/WEB-INF/tiles/bodyfragments/category/_category.jsp" />
 	</definition>
+	
+	<!-- Product Manager Page -->
+	<definition name="product" extends="base.definition">
+		<put-attribute name="title" value="Product Manager" />
+		<put-attribute name="body" value="/WEB-INF/tiles/bodyfragments/product/_product.jsp" />
+	</definition>
+	
+	<!-- Raw Material Manager Page -->
+	<definition name="raw-material" extends="base.definition">
+		<put-attribute name="title" value="Raw Material Manager" />
+		<put-attribute name="body" value="/WEB-INF/tiles/bodyfragments/raw-material/_raw-material.jsp" />
+	</definition>
 
 
 </tiles-definitions>

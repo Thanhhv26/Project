@@ -20,9 +20,7 @@
         
         <intercept-url pattern="/login" access="permitAll()" />
         <intercept-url pattern="/logout" access="permitAll()" />
-        
-        
-        <intercept-url pattern="/category" access="hasRole('ROLE_ADMIN')" />
+		
         <intercept-url pattern="/**" access="isAuthenticated()" />
  
         <access-denied-handler error-page="/error403" />

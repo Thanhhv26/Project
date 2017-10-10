@@ -25,7 +25,7 @@ public class CityController {
 	public String index(Model model) throws Exception {
 		List<CityEntity> cities = service.getAllCities();
 		model.addAttribute("cities", cities);
-		return "city";
+		return PageConst.CITY_PAGE;
 	}
 	
 	@RequestMapping(value = PageConst.CITY_CREATE, method = { RequestMethod.POST })
