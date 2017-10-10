@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.system.hvt.common.constant.PageConst;
 
 @Controller
-@RequestMapping(value = PageConst.CATEGORY)
+@RequestMapping(value = PageConst.CATEGORY_PATH)
 public class CategoryController {
 	
 	@RequestMapping(value = "", method = { RequestMethod.GET })
 	public String index(Model model) {
 		
-		return PageConst.CATEGORY_INDEX;
+		return PageConst.CATEGORY_PAGE;
 	}
 	
 }

@@ -75,7 +75,9 @@ public class CityDaoImpl implements CityDao {
 					stmt.close();
 			} catch (SQLException se2) {
 			}
-			rs.close();
+			if(rs != null) {
+				rs.close();
+			}
 			connectionManager.close();
 		}
 		return cities;
@@ -240,7 +242,9 @@ public class CityDaoImpl implements CityDao {
 					stmt.close();
 			} catch (SQLException se2) {
 			}
-			rs.close();
+			if(rs != null) {
+				rs.close();
+			}
 			connectionManager.close();
 		}
 		return cities;

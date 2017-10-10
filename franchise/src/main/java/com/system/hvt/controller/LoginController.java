@@ -1,5 +1,7 @@
 package com.system.hvt.controller;
 
+import java.security.Principal;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,14 +13,26 @@ import com.system.hvt.common.constant.PageConst;
 //@RequestMapping(value = PageConst.LOGIN)
 public class LoginController {
 	
-	@RequestMapping(value = {"", "/login"}, method = { RequestMethod.GET })
+	@RequestMapping(value = {"", PageConst.LOGIN_PATH}, method = { RequestMethod.GET })
 	public String getAllUser(Model model) {
-		return PageConst.LOGIN_INDEX;
+		return PageConst.LOGIN_PAGE;
 	}
 	
-	@RequestMapping(value = {PageConst.MAIN}, method = RequestMethod.GET)
+	@RequestMapping(value = PageConst.HOME_PATH, method = RequestMethod.GET)
 	public String welcomePage(Model model) {
-		return PageConst.MAIN_INDEX;
+		return PageConst.HOME_PAGE;
+	}
+	
+	@RequestMapping(value = PageConst.Error403_PATH, method = RequestMethod.GET)
+	public String accessDenied(Model model, Principal principal) {
+		String message = "";
+		if (principal != null) {
+			message = "[ " + principal.getName() + " ]: You do not have permission to access this page!";
+		} else {
+			message = "You do not have permission to access this page!";
+		}
+		model.addAttribute("message", message);
+		return PageConst.Error403_PAGE;
 	}
 	
 }

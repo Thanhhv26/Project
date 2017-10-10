@@ -15,7 +15,7 @@ import com.system.hvt.entity.CityEntity;
 import com.system.hvt.service.CityService;
 
 @Controller
-@RequestMapping(value = PageConst.CITY)
+@RequestMapping(value = PageConst.CITY_PATH)
 public class CityController {
 	
 	@Autowired
@@ -25,7 +25,7 @@ public class CityController {
 	public String index(Model model) throws Exception {
 		List<CityEntity> cities = service.getAllCities();
 		model.addAttribute("cities", cities);
-		return PageConst.CITY_INDEX;
+		return "city";
 	}
 	
 	@RequestMapping(value = PageConst.CITY_CREATE, method = { RequestMethod.POST })

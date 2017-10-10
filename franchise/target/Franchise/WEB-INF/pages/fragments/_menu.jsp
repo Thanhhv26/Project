@@ -17,6 +17,10 @@
   	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"/>
   	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
+
+
+
+<div class="container">
 	<!-- Admin Module -->
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -33,13 +37,14 @@
 		      	<li><a href="${pageContext.request.contextPath}/Communication">Communication</a></li>
 				<li><a href="${pageContext.request.contextPath}/PhotoGallery">Photo-Gallery</a></li>
 		      	<li><a href="${pageContext.request.contextPath}/profile">Profile</a></li>
+		      	<li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
 		    </ul>
-		    <form class="navbar-form navbar-left" role="search">
+		    <!-- <form class="navbar-form navbar-left" role="search">
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Search">
 				</div>
 				<button type="submit" class="btn btn-default">Submit</button>
-			</form>
+			</form> -->
 		</div>
 	</nav>
 	
@@ -110,5 +115,4 @@
 		</div>
 	</nav>
 	
-	
-	
+</div>
