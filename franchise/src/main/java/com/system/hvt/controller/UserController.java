@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.system.hvt.entity.UserEntity;
+import com.system.hvt.model.entity.UserEntity;
 import com.system.hvt.service.UserService;
 
 @Controller

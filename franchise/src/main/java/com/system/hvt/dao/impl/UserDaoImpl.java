@@ -16,7 +16,7 @@ import com.system.hvt.common.database.DbConnectInfomationDTO;
 import com.system.hvt.common.database.jdbc.BaseConnectionManager;
 import com.system.hvt.common.database.jdbc.ConnectionManagerFactory;
 import com.system.hvt.dao.UserDao;
-import com.system.hvt.entity.UserEntity;
+import com.system.hvt.model.entity.UserEntity;
 
 @Repository
 public class UserDaoImpl implements UserDao {

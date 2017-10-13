@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.system.hvt.common.constant.PageConst;
-import com.system.hvt.entity.CityEntity;
+import com.system.hvt.model.entity.CityEntity;
 import com.system.hvt.service.CityService;
 
 @Controller

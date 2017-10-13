@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.system.hvt.dao.CityDao;
-import com.system.hvt.entity.CityEntity;
+import com.system.hvt.model.entity.CityEntity;
 import com.system.hvt.service.CityService;
 
 @Service

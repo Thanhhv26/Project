@@ -15,7 +15,7 @@ import com.system.hvt.common.database.DbConnectInfomationDTO;
 import com.system.hvt.common.database.jdbc.BaseConnectionManager;
 import com.system.hvt.common.database.jdbc.ConnectionManagerFactory;
 import com.system.hvt.dao.CityDao;
-import com.system.hvt.entity.CityEntity;
+import com.system.hvt.model.entity.CityEntity;
 
 @Repository
 public class CityDaoImpl implements CityDao {
@@ -66,7 +66,9 @@ public class CityDaoImpl implements CityDao {
 					stmt.close();
 			} catch (SQLException se2) {
 			}
-			rs.close();
+			if(rs != null) {
+				rs.close();
+			}			
 			connectionManager.close();
 			throw new Exception(e.getMessage());
 		} finally {
