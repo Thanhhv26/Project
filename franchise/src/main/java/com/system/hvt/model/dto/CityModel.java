@@ -1,4 +1,4 @@
-package com.system.hvt.entity;
+package com.system.hvt.model.dto;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter(AccessLevel.PUBLIC)
 @Setter(AccessLevel.PUBLIC)
-public class CityEntity {
+public class CityModel {
 	
 	private int id;
 	private String name;
