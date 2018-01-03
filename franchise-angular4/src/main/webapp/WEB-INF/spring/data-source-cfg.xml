@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+ 
+  <!-- For ORACLE -->
+  <bean id="myDataSource0"
+      class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+ 
+      <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+      <property name="url" value="jdbc:oracle:thin:@192.168.111.213:1521:orcl" />
+      <property name="username" value="biorcl12cr2" />
+      <property name="password" value="biorcl12cr2" />
+  </bean>
+  
+  <!-- For MYSQL -->
+  <bean id="myDataSource1"
+      class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+     <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+     <property name="url" value="jdbc:mysql://localhost:3306/simplehr" />
+     <property name="username" value="root" />
+     <property name="password" value="12345" />
+  </bean>
+  
+  <!-- For SQL SERVER -->
+  <bean id="myDataSource"
+      class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+     <!-- Using JDBC Driver: JTDS -->
+     <property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver" />
+     <property name="url"
+         value="jdbc:jtds:sqlserver://192.168.111.213:1433/test;instance=SQLEXPRESS" />
+     <property name="username" value="sa" />
+     <property name="password" value="123456?a" />
+ </bean>
+  
+</beans>

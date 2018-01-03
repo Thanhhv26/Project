@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+      "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+      "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Base Define -->
+	<definition name="base.definition" template="/WEB-INF/tiles/layouts/classic.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/basefragments/_header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles/basefragments/_menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/basefragments/_footer.jsp" />
+	</definition>
+	
+	<!-- Error403 Page -->
+	<definition name="error403" extends="base.definition">
+		<put-attribute name="title" value="Error403" />
+		<put-attribute name="body" value="/WEB-INF/tiles/bodyfragments/errors/_error403.jsp" />
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="home" extends="base.definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/WEB-INF/tiles/bodyfragments/_home.jsp" />
+	</definition>
+
+	<!-- Login Page -->
+	<definition name="login" extends="base.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/tiles/bodyfragments/_login.jsp" />
+	</definition>
+
+	<!-- City Manager Page -->
+	<definition name="city" extends="base.definition">
+		<put-attribute name="title" value="City Manager" />
+		<put-attribute name="body" value="/WEB-INF/tiles/bodyfragments/city/_city.jsp" />
+	</definition>
+
+	<!-- Category Manager Page -->
+	<definition name="category" extends="base.definition">
+		<put-attribute name="title" value="Category Manager" />
+		<put-attribute name="body" value="/WEB-INF/tiles/bodyfragments/category/_category.jsp" />
+	</definition>
+	
+	<!-- Product Manager Page -->
+	<definition name="product" extends="base.definition">
+		<put-attribute name="title" value="Product Manager" />
+		<put-attribute name="body" value="/WEB-INF/tiles/bodyfragments/product/_product.jsp" />
+	</definition>
+	
+	<!-- Raw Material Manager Page -->
+	<definition name="raw-material" extends="base.definition">
+		<put-attribute name="title" value="Raw Material Manager" />
+		<put-attribute name="body" value="/WEB-INF/tiles/bodyfragments/raw-material/_raw-material.jsp" />
+	</definition>
+
+
+</tiles-definitions>
