@@ -1,4 +1,4 @@
-package com.huvata.service;
+package com.huvata.service.impl;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.huvata.dao.UserProfileDao;
 import com.huvata.model.UserProfile;
+import com.huvata.service.UserProfileService;
 
 
 @Service("userProfileService")

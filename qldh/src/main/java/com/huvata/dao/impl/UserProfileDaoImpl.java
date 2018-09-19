@@ -1,4 +1,4 @@
-package com.huvata.dao;
+package com.huvata.dao.impl;
 
 import java.util.List;
 
@@ -7,6 +7,8 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
+import com.huvata.dao.AbstractDao;
+import com.huvata.dao.UserProfileDao;
 import com.huvata.model.UserProfile;
 
 

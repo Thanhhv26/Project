@@ -20,7 +20,7 @@ import com.huvata.converter.RoleToUserProfileConverter;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.huvata.")
+@ComponentScan(basePackages = "com.huvata")
 public class AppConfig extends WebMvcConfigurerAdapter{
 	
 	

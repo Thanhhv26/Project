@@ -1,4 +1,4 @@
-package com.huvata.dao;
+package com.huvata.dao.impl;
 
 import java.util.List;
 
@@ -10,6 +10,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
+import com.huvata.dao.AbstractDao;
+import com.huvata.dao.UserDao;
 import com.huvata.model.User;
 
 

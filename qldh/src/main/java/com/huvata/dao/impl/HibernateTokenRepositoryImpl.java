@@ -1,4 +1,4 @@
-package com.huvata.dao;
+package com.huvata.dao.impl;
 
 import java.util.Date;
 
